@@ -96,8 +96,8 @@ if (isset($_POST['submit'])) {
 } elseif(array_key_exists('load', $_GET) && array_key_exists('calculations', $_SESSION) && is_numeric($_GET['load']) && array_key_exists(intval($_GET['load']), $_SESSION['calculations'])){
     $load = true;
     $z1 = $_SESSION['calculations'][intval($_GET['load'])]['z1'];
-    $z1 = $_SESSION['calculations'][intval($_GET['load'])]['z2'];
-    $z1 = $_SESSION['calculations'][intval($_GET['load'])]['co'];
+    $z2 = $_SESSION['calculations'][intval($_GET['load'])]['z2'];
+    $co = $_SESSION['calculations'][intval($_GET['load'])]['co'];
 }
 function error_handling(&$err, $errno)
 {
