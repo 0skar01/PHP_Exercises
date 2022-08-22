@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    font:12pt Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding: 1rem;
+}
+h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+p {
+    margin: .5rem 0;
+}
+fieldset {
+    border: none;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    width: 100%;
+}
+fieldset > p {
+    font-weight: bold;
+}
+fieldset:nth-child(2) {
+    background: rgba(0,0,0,.3);
+}
+fieldset:nth-child(3) {
+    background: rgba(0,0,0,.2);
+}
+fieldset:nth-child(4) {
+    background: rgba(0,0,0,.1);
+}
+fieldset:nth-child(5) label > span {
+    width: auto;
+}
+body > div{
+    font-size: 2rem;
+    font-weight: bold;
+    color: green;
+    
+}
+label {
+    box-sizing: content-box;
+    cursor: pointer;
+    display: block;
+    float: left;
+    clear: left;
+    margin: .3rem 0;
+    width: 100%;
+}
+label > span, label > input {
+    float: left;
+    padding: .3rem
+}
+label > span {
+    box-sizing: content-box;
+    width: 14rem;
+}
+label > input {
+    margin: 0 1rem;
+}
+input[type="text"] {
+    box-sizing: border-box;
+    cursor:text;
+    width: 100%;
+    width: calc(100% - 1rem - 2px);
+}
+input[type="checkbox"], input[type="radio"] {
+    cursor: pointer;
+    margin-top: .5em;
+}
+input[type="checkbox"] + span, input[type="radio"] + span {
+    display: inline-block;
+    width: calc(100% - 4rem);
+}
+textarea {
+    resize: vertical;
+    min-height: 4rem;
+    width: 100%;
+}
+button {
+    background-image: linear-gradient(to bottom, rgb(0,200,0) 50%, rgb(0,150,0) 50%);
+    border: none;
+    border-radius: .3rem;
+    cursor: pointer;
+    float: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    padding: .5rem 2rem;
+}
+button:hover {
+    background-image: linear-gradient(to bottom, rgb(0,230,0) 50%, rgb(0,190,0) 50%);
+}
+@media screen and (min-width:768px) {
+    body {
+        padding: 1rem 20vw;
+    }
+}
+@media screen and (min-width:1200px) {
+    body {
+        padding: 1rem 25vw;
+    }
+    input[type="text"] {
+        width: calc(100% - 17rem - 2px);
+    }
+    
+}

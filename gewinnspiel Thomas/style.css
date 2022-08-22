@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    font:12pt Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+body {
+    padding: 1rem 1rem 3rem 1rem;
+}
+h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+p {
+    margin: .5rem 0;
+}
+fieldset {
+    border: none;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    width: 100%;
+}
+fieldset:nth-child(1n + 2) {
+    margin-left: .5rem;
+    margin-right: .5rem;
+    width: calc(100% - 1rem);
+}
+fieldset > p {
+    font-weight: bold;
+}
+fieldset:nth-child(2) {
+    background: rgba(0,0,0,.3);
+}
+fieldset:nth-child(3) {
+    background: rgba(0,0,0,.2);
+}
+fieldset:nth-child(4) {
+    background: rgba(0,0,0,.1);
+}
+fieldset:nth-child(1n + 5) {
+    padding: 0;
+    width: calc(100% - 1rem);
+}
+fieldset:nth-child(5) label > span {
+    width: auto;
+}
+label {
+    box-sizing: content-box;
+    cursor: pointer;
+    display: block;
+    float: left;
+    clear: left;
+    margin: .3rem 0;
+    padding-top: .2rem;
+    width: 100%;
+}
+label > span, label > input {
+    float: left;
+}
+label > span {
+    box-sizing: content-box;
+    width: 14rem;
+}
+label > input {
+    margin: 0;
+}
+label.error > span {
+    color:#a00;
+}
+textarea {
+    resize: vertical;
+    min-height: 4rem;
+}
+input[type="text"] {
+    box-sizing: border-box;
+    width: calc(100% - 1rem - 2px);
+}
+input[type="text"], textarea {
+    border: 1px solid #999;
+    border-radius: .3rem;
+    cursor: text;
+    padding: .5rem !important;
+    width: 100%;
+}
+input[type="checkbox"], input[type="radio"] {
+    cursor: pointer;
+    margin: .3rem 1rem 0 .5rem;
+}
+input[type="checkbox"] + span, input[type="radio"] + span {
+    display: inline-block;
+    width: calc(100% - 4rem);
+}
+button {
+    background-image: linear-gradient(to bottom, rgb(0,200,0) 50%, rgb(0,150,0) 50%);
+    border: none;
+    border-radius: .3rem;
+    cursor: pointer;
+    float: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    padding: .5rem 2rem;
+}
+button:hover {
+    background-image: linear-gradient(to bottom, rgb(0,230,0) 50%, rgb(0,190,0) 50%);
+}
+div.success {
+    background-color: rgba(100,230,100,.5);
+}
+div.error {
+    background-color: rgba(200,0,0,.5);
+}
+div.success, div.error {
+    border: 1.px solid #f00;
+    border-radius: .5rem;
+    box-shadow: 0px 3px 5px #666;
+    padding: .5rem;
+}
+div.success h4, div.error h4 {
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+div.success p, div.error p {
+    margin-bottom: .3rem;
+}
+div.error ul {
+    margin-left: 1.5rem;
+}
+div.debug {
+    background-image: linear-gradient(to bottom, rgba(255,0,0, .8) 2rem, rgba(255,255,255, .8) 2rem);
+    border-top: 3px solid #f00;
+    bottom: -2rem;
+    cursor:grab;
+    height: 0;
+    left:0;
+    overflow: hidden;
+    padding: 2rem 2rem;
+    position:fixed;
+    transition: all 1s ease;
+    width: 100%;
+}
+div.debug:hover {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 85vh;
+}
+div.debug > div {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    left: 50%;
+    position: absolute;
+    top: .5rem;
+    transform: translateX(-50%);
+}
+div.debug * {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: .8rem;
+}
+div.debug h2 {
+    font-weight: bold;
+    margin: 1em 0 .5em 0;
+}
+@media screen and (min-width:768px) {
+    body {
+        padding: 1rem 20vw 3rem 20vw;
+    }
+}
+@media screen and (min-width:1200px) {
+    body {
+        padding: 1rem 25vw 3rem 25vw;
+    }
+    input[type="text"] {
+        margin-left: 1rem;
+        width: calc(100% - 15rem - 2px);
+    }
+    
+}
